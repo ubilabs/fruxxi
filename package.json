@@ -1,6 +1,6 @@
 {
   "name": "fruxxi",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Franks Flux Implementation.",
   "main": "module/fruxxi.js",
   "scripts": {
