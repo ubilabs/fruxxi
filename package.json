@@ -3,6 +3,11 @@
   "version": "0.0.4",
   "description": "Franks Flux Implementation.",
   "main": "module/fruxxi.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ubilabs/fruxxi.git"
+  },
   "scripts": {
     "prepare:build": "rm -rf module",
     "test": "npm run eslint && babel-node test/suite.js",
@@ -28,7 +33,6 @@
     "email": "mecklenburg@ubilabs.net",
     "url": "http://ubilabs.net/"
   },
-  "license": "ISC",
   "dependencies": {
     "lodash.isequal": "^3.0.4"
   },
