@@ -1,0 +1,6 @@
+src
+.editorconfig
+.gitignore
+.travis.yml
+bower.json
+CONVENTIONS.md
