@@ -2,5 +2,5 @@ src
 .editorconfig
 .gitignore
 .travis.yml
-bower.json
+.eslintrc
 CONVENTIONS.md

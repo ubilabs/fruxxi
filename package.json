@@ -29,6 +29,9 @@
     "url": "http://ubilabs.net/"
   },
   "license": "ISC",
+  "dependencies": {
+    "lodash.isequal": "^3.0.4"
+  },
   "devDependencies": {
     "babel": "^5.8.21",
     "babelify": "^6.2.0",
