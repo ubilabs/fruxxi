@@ -1,0 +1,43 @@
+{
+  "name": "fruxxi",
+  "version": "0.0.0",
+  "description": "Franks Flux Implementation.",
+  "main": "module/fruxxi.js",
+  "scripts": {
+    "prepare:build": "rm -rf module",
+    "test": "npm run eslint && babel-node test/suite.js",
+    "eslint": "eslint src/*.js",
+    "build": "npm run prepare:build && npm run eslint && npm run build:js",
+    "build:js": "babel src --out-dir module",
+    "uglifyjs": "uglifyjs index.js -o index.js -c warnings=false,drop_console=true --mangle",
+    "prepublish": "npm run build",
+    "release": "echo 'Usage: npm run release:patch|minor|major'",
+    "release:patch": "bumpery --verify='npm test' --no-push --no-commit --no-createTag --versionType patch && npm run changelog && npm run release:commit",
+    "release:minor": "bumpery --verify='npm test' --no-push --no-commit --no-createTag --versionType minor && npm run changelog && npm run release:commit",
+    "release:major": "bumpery --verify='npm test' --no-push --no-commit --no-createTag --versionType major && npm run changelog && npm run release:commit",
+    "release:commit": "bumpery --commitFiles 'CHANGELOG.md package.json' --commitMessage 'chore(release): version %VERSION%' --no-bumpVersion",
+    "changelog": "conventional-changelog-generator && atom -w CHANGELOG.md"
+  },
+  "keywords": [
+    "flux",
+    "dispatcher",
+    "store"
+  ],
+  "author": {
+    "name": "Frank Mecklenburg",
+    "email": "mecklenburg@ubilabs.net",
+    "url": "http://ubilabs.net/"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^5.8.21",
+    "babelify": "^6.2.0",
+    "browserify": "^11.0.1",
+    "bumpery": "^1.1.1",
+    "conventional-changelog-generator": "0.0.3",
+    "eslint": "^1.1.0",
+    "lodash.isequal": "^3.0.4",
+    "tape": "^4.2.0",
+    "uglifyjs": "^2.4.10"
+  }
+}
