@@ -1,6 +1,6 @@
 {
   "name": "fruxxi",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Franks Flux Implementation.",
   "main": "module/fruxxi.js",
   "license": "MIT",
